@@ -189,9 +189,26 @@ button, .btn {
 }
 
 .secondary-btn:hover {
-    background-color: rgba(0, 238, 255, 0.1);
+    background-color: var(--accent-color);
+    color: var(--primary-dark);
     transform: translateY(-3px);
-    box-shadow: 0 0 20px rgba(0, 238, 255, 0.5);
+    box-shadow: 0 0 20px rgba(0, 238, 255, 0.8);
+}
+
+
+
+.download-btn {
+    background-color: var (--accent-color-2);
+    color: var(--primary-dark);
+    border: 1px solid var(--accent-color);
+    box-shadow: 0 0 10px rgba(0, 255, 102, 0.5);
+}
+
+.download-btn:hover {
+    background-color: #00cccc;
+    color: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(0, 238, 255, 0.3);
 }
 
 /* ====================
