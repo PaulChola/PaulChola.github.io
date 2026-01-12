@@ -198,17 +198,17 @@ button, .btn {
 
 
 .download-btn {
-    background-color: var (--accent-color);
-    color: var(--primary-dark);
+    background-color: transparent;
+    color: var(--accent-color);
     border: 1px solid var(--accent-color);
     box-shadow: 0 0 10px rgba(0, 238, 255, 0.5);
 }
 
 .download-btn:hover {
-    background-color: #00cccc;
+    background-color: var(--accent-color);
     color: var(--primary-dark);
     transform: translateY(-3px);
-    box-shadow: 0 0 20px rgba(0, 238, 255, 0.3);
+    box-shadow: 0 0 20px rgba(0, 238, 255, 0.8);
 }
 
 /* ====================
