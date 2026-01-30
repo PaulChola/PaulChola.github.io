@@ -163,71 +163,141 @@
             </div>
         </div>
     </section>
-
     <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <div class="section-header">
-                <h2>Projects</h2>
-                <div class="underline"></div>
+<section id="projects" class="projects">
+    <div class="container">
+        <div class="section-header">
+            <h2>Projects</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="projects-grid">
+
+            <!-- Navigation App -->
+            <div class="project-card">
+                <h3>Navigation App for Visually Impaired</h3>
+                <p>Mobile app with real-time object detection using Android Studio & Kotlin. AI-based computer vision for navigation support.</p>
+                <div class="project-links">
+                    <a href="https://github.com/PaulChola/Camera-segmentation-app" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                </div>
             </div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>Navigation App for Visually Impaired</h3>
-                    <p>Mobile app with real-time object detection using Android Studio & Kotlin. AI-based computer vision for navigation support.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/PaulChola/Camera-segmentation-app" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-                    </div>
+
+            <!-- Cloud SIEM -->
+            <div class="project-card">
+                <h3>Cloud-based SIEM Solution</h3>
+                <p>Built in Azure using PowerShell, KQL, and Log Analytics. Monitors Windows Event IDs 4624 & 4625, visualizing brute-force attempts in real time.</p>
+                <div class="project-links">
+                    <a href="https://github.com/PaulChola/Computer_Information_Security" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
                 </div>
-                <div class="project-card">
-                    <h3>Cloud-based SIEM Solution</h3>
-                    <p>Built in Azure using PowerShell, KQL, and Log Analytics. Monitors Windows Event IDs 4624 & 4625, visualizing brute-force attempts in real time.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/PaulChola/Computer_Information_Security" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <h3>File Integrity Monitor (FIM)</h3>
-                    <p>Lightweight PowerShell tool to monitor critical files for unauthorized changes using SHA-512 hashing.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/PaulChola/Computer_Information_Security/blob/main/FIM/FIM.ps1" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-                    </div>
+            </div>
+
+            <!-- Malware Detection ML -->
+            <div class="project-card">
+                <h3>Malware Detection Machine Learning System</h3>
+                <p>
+                    A cybersecurity-focused machine learning project that performs static
+                    analysis on executable files and classifies them as malicious or benign
+                    using trained classification models.
+                </p>
+                <ul class="project-details">
+                    <li><strong>Tech Stack:</strong> Python, scikit-learn, TensorFlow/Keras, NumPy</li>
+                    <li><strong>Core Features:</strong> CLI scanning, model training, batch analysis</li>
+                    <li><strong>Techniques:</strong> Feature Hashing, Random Forest, Neural Networks</li>
+                    <li><strong>Evaluation:</strong> Accuracy metrics, ROC curves, cross-validation</li>
+                </ul>
+                <div class="project-links">
+                    <a href="https://github.com/PaulChola/malware-detection-ml"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <i class="fab fa-github"></i> View Project
+                    </a>
+                    <button class="btn secondary-btn" onclick="openCaseStudy()">View Case Study</button>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <div class="section-header">
-                <h2>Experience</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <h3>OSINT Investigator</h3>
-                    <h4>Digital Safe Limited | Sep 2023</h4>
-                    <ul>
-                        <li>Participated in Zambia’s first HackTheBox CTF as part of a five-member team</li>
-                        <li>Conducted OSINT investigations using cybersecurity techniques & teamwork</li>
-                        <li>Identified potential vulnerabilities for attack simulations under 24-hour deadlines</li>
-                    </ul>
-                </div>
-                <div class="timeline-item">
-                    <h3>Researcher – Navigation Needs Study</h3>
-                    <h4>Tusekelele Disabled Club | Nov–Dec 2024</h4>
-                    <ul>
-                        <li>Conducted surveys and interviews with visually impaired individuals</li>
-                        <li>Prototyped navigation support tools using TensorFlow Lite, Camera X, and Text-to-Speech</li>
-                        <li>Provided actionable insights to improve assistive technology design</li>
-                    </ul>
-                </div>
-            </div>
+<!-- Malware Detection Case Study Modal -->
+<div id="caseStudyModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeCaseStudy()">&times;</span>
+        <h2>Malware Detection ML Case Study</h2>
+        <p>This case study illustrates the workflow of the malware detection system:</p>
+        <ol>
+            <li><strong>Data Preparation:</strong> Collected malicious and benign binaries and extracted string features.</li>
+            <li><strong>Model Training:</strong> Used Random Forest and Neural Network models to classify files.</li>
+            <li><strong>Evaluation:</strong> Performed cross-validation, ROC curve analysis, and confidence scoring.</li>
+            <li><strong>CLI Usage:</strong> Users can train, scan individual files, or perform batch scans.</li>
+        </ol>
+        <div class="case-study-images">
+            <img src="assets/ml_training.png" alt="Model Training Screenshot" loading="lazy">
+            <img src="assets/ml_scan.png" alt="File Scan Screenshot" loading="lazy">
+            <img src="assets/ml_roc.png" alt="ROC Curve Screenshot" loading="lazy">
         </div>
-    </section>
+    </div>
+</div>
 
-    <!-- Education Section -->
+<style>
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+    background-color: #f4f4f4;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 900px;
+}
+
+.close {
+    color: #333;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: red;
+}
+
+.case-study-images img {
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+</style>
+
+<script>
+// Modal functions
+function openCaseStudy() {
+    document.getElementById('caseStudyModal').style.display = 'block';
+}
+
+function closeCaseStudy() {
+    document.getElementById('caseStudyModal').style.display = 'none';
+}
+
+// Close modal if clicked outside
+window.onclick = function(event) {
+    const modal = document.getElementById('caseStudyModal');
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+ <!-- Education Section -->
     <section id="education" class="education">
         <div class="container">
             <div class="section-header">
